@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>search</title>
+<style>
+ input
+  {
+  display:block;
+  margin:10px;
+  }
+  
+  h1{
+  font-family:sans-serif;
+  color:black;
+  }
+input[type=text]
+  {
+  
+  margin:32px;
+  padding:10px;
+  border-radius:3px;
+  border:1px solid #4CAF50;
+  }
+  input[type=submit]
+  {
+  background-color:#4CAF50;
+  border:8px solid;
+  padding:9px 13px 9px 12px;
+  border-radius:15px 3px;
+  border:1px solid 319db8;
+  color:white;
+  margin:-51px;
+  font-weight:bold;
+  }
+  .aa
+{
+width:419px;
+height:200px;
+background-color:rgba(116, 173, 218, 0.15);
+margin:-14px auto;
+margin-top:98px;
+padding-top:10px;
+padding-bottom:257px;
+padding-left:-1px;
+border-radius:15px;
+-webkit-border-radius:15px;
+-o-border-radius:15px;
+-moz-border-radius:15px;
+color:white;
+font-weight:bolder;
+}
+body {
+
+height:1400px;
+ background:url(index_files/truck2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+     color: black;
+	 
+	 font-family:verdana;
+      display: block;
+    margin: 8px;
+    margin-top: 113px;
+    margin-right: 66px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+
+}
+
+  
+
+</style>
+<!--<script type="text/javascript">
+</script>
+<script>
+$(document).ready(function(){
+	$('#search').keyup(function(){
+	var txt=$('this').val();
+    if(txt != '')	
+	{
+		$.ajax({
+			url:"search1.php";
+			method:"post";
+			data:{search:txt};
+			datatype:"text";
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+			});
+
+	
+
+	}
+	else
+	{
+		$('#result').html('');
+		$.ajax({
+			url:"search1.php";
+			method:"post";
+			data:{search:txt};
+			datatype:"text";
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+			});
+
+	}
+	
+	});
+});
+
+</script>
+-->
+</head>
+<body>
+<div class="aa">
+
+<form action="profile.php" method="post">
+<center>
+<h1>Please Enter Your name to view your profile...</h1>
+Search data:<input type="text" name="searchbox" placeholder="Enter Your first Name" required/><br><br>
+<input type="submit" value="search" name="search">
+</center>
+</form>
+
+</div>
+</body>
+</html>

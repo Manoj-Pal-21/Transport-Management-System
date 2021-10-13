@@ -1,0 +1,203 @@
+* {margin:0; padding:0; box-sizing:border-box; outline:none;}
+body {font-size:15px; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+.hidden {display:none;}
+.clear {clear:both;}
+.txtRgt {text-align:right;}
+.txtLft {text-align:left;}
+.txtCntr {text-align:center;}
+.row {width:100%;}
+.row:before, .row:after {clear:both; display:block; content:"";}
+.admin-login-form {position:absolute; top:0; left:0; right:0; bottom:0;  height:325px;}
+.admin-login-form, .main-container {margin:auto; width:100%; max-width:480px;}
+.logo-img {margin-bottom:18px; width:100%;}
+.ui-tabs, .main-container {border:3px solid #df0633;}
+.ui-tabs {padding:25px 30px;}
+.ui-tabs .ui-tabs-nav {padding:0; border-radius:0; border:0; border-bottom:2px solid #244f96; background:none;}
+.ui-tabs .ui-tabs-nav li {width:49%; background:#244f96; text-align:center; margin-left:.2em; margin-right:0;}
+.ui-tabs .ui-tabs-nav li a {color:#fff; width:100%; padding:8px 5px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {background:#fff; border:2px solid #244f96; border-bottom:0; margin-bottom:-2px; padding-bottom:3px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {color:#244f96;}
+.ui-tabs .ui-tabs-panel {padding:1em 8px;}
+.admin-login-form form {width:80%; margin:25px auto 0;}
+.login-field-row {padding-bottom:12px;}
+label {font-size:15px; float:left; width:30%; padding:8px 10px 0 0; font-size:12px;}
+input, select {padding:6px 8px; border:1px solid #244f96; font-size:14px; line-height:18px;}
+.two-fields, input, select {float:left; width:70%;}
+.login-field-btn {padding-top:15px; text-align:center;}
+.login-field-btn input, .btn-logout, .btn {background:#244f96; border:2px solid #244f96; color:#fff; cursor:pointer; float:none;}
+.login-field-btn input:hover, .btn-logout:hover, .btn:hover {background:#fff; color:#244f96;}
+.login-msg {color:#f00; font-size:15px; margin-bottom:20px;}
+.header {border-bottom:3px solid #df0633; padding:20px;}
+.header, #sidebar-nav {background:#fafafa;}
+.header .btn-logout {float:right; margin-top:10px; width:auto;}
+.header .logo-wrap {float:left;}
+.header .logo-wrap img {width:100%;}
+#sidebar-nav {padding:20px; float:left;}
+.side-nav-items{width:225px; margin:25px auto 0;}
+.side-nav-items a{color:#007aae;text-decoration:none}
+.side-nav-items li,.side-nav-items li a{font-size:15px; font-weight:bold;}
+.side-nav-items li a {padding:10px 14px; display:block; text-decoration:none;}
+.side-nav-items li{border:1px solid #eee; margin-bottom:6px; position:relative; list-style:none; background:#fff;}
+.side-nav-items li:after {display:block; content:""; position:absolute; width:4px; height:100%; top:0; right:0;}
+.side-nav-items li.active,.side-nav-items li:after {background:#df0633;}
+.side-nav-items li:hover:after{width:100%; z-index:-1;}
+.side-nav-items li.active a,.side-nav-items li:hover a {color:#fff;background:#df0633;}
+.content {padding:20px;}
+.content h3 {color:#df0633; margin-bottom:20px;}
+.field-col {width:50%; float:left; padding-bottom:15px;}
+.field-col.full {width:100%; padding-left:0 !important; padding-right:0 !important;}
+.field-col label {font-weight:bold; width:100%; padding:0 0 4px;}
+.field-col label.ptop0 {padding-top:0;}
+.field-col:nth-child(odd) {padding-right:10px;}
+.field-col:nth-child(even) {padding-left:10px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {text-indent:-9999px;}
+.two-fields input, .two-fields select {width:50%; float:left;}
+.two-fields input {width:48%; margin-right:2%;}
+.field-col.pkgs {padding:0 10px 20px 0;}
+.field-col-btn {text-align:center;}
+.field-col-btn .btn {width:50%;}
+.field-col input, .field-col select {padding:4px 6px; width:65%;}
+.field-col select {padding:5px 6px;}
+.field-col.full input, .field-col.full select {width:100%;}
+#dynamicInput, #dynamicInput1 {width:100%; float:left; position:relative; padding-bottom:10px;}
+#dynamicInput label:nth-child(1), #dynamicInput .fbase {width:60%;}
+#dynamicInput label:nth-child(2), #dynamicInput .fbase-qty {width:60px; margin-left:20px;}
+#dynamicInput .btn, #dynamicInput1 .btn, .field-col input.btn {width:auto; font-size:14px; padding:5px 10px;}
+#dynamicInput .btn.remove, #dynamicInput1 .btn.remove {width:20px; font-size:14px; padding:0px 0 0px; float:right; line-height:20px;}
+#dynamicInput > div, #dynamicInput1 > div {padding:8px 0; border-bottom:1px solid #ccc;}
+#dynamicInput > div.row, #dynamicInput1 > div.row {padding-top:0;}
+h4.user-name {margin-top:20px; float:left;}
+.field-col input.wid100, .field-col select.wid100 {width:100%;}
+#dynamicInput1 label:nth-child(2), #dynamicInput1 .diesel-station {width:60%;}
+#dynamicInput1 label:nth-child(1), #dynamicInput1 .diesel-rs {width:60px; margin-right:20px;}
+.custom-select-items input, .field-col label.cs-label {float:none; display:block;}
+
+
+/* Standard Custom Select
+----------------------------------*/
+.custom-select {
+  position: relative;
+  width: 100%;
+  border: 1px solid #888;
+  background: #fff;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.custom-select a {
+  display: inline-block;
+  width: 100%;
+  padding: 6px 8px 2px;
+  color: #000;
+  font-size:14px;
+  line-height:18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.custom-select a span {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.custom-select select {
+  display: none !important;
+}
+.custom-select > div {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 1px 0 0 -1px;
+  width: 101%;
+  border: 1px solid #888;
+  border-top: 0;
+  background: #FFFFFF;
+  z-index: 10;
+  overflow: hidden;
+  padding:3px;
+}
+.custom-select input {
+  width: 100%;
+  border: 1px solid #888;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom:3px;
+}
+.custom-select > div > div {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-height: 120px;
+}
+.custom-select div ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.custom-select div ul li {
+  display: none;
+  padding: 5px;
+}
+.custom-select div ul li.active {
+  display: block;
+  cursor: pointer;
+}
+.custom-select div ul li:hover {
+  background: #66bbff;
+  color: #fff;
+}
+.custom-select div ul li.option-hover {
+  background: #3399ff;
+  color: #fff;
+}
+.custom-select div ul li.option-disabled {
+  color: #999;
+}
+.custom-select div ul li.option-disabled:hover {
+  background: #ff9999;
+  color: #fff;
+}
+.custom-select div ul li.option-hover.option-disabled {
+  background: #ff6666;
+  color: #fff;
+}
+.custom-select div ul li.no-results {
+  display: none;
+  background: #f2f2f2;
+  color: #000;
+}
+/* Custom Select - Open
+----------------------------------*/
+.custom-select-open {
+  border-bottom: 1px solid #eee;
+}
+.custom-select-open div {
+  display: block;
+}
+
+/* Hide Input Box
+----------------------------------*/
+.custom-select input.custom-select-hidden-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: -1000px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  z-index: -1 !important;
+}
+
+/* Mobile Override
+----------------------------------*/
+.custom-select-mobile select {
+  display: inline !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

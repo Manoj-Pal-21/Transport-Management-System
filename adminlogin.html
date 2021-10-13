@@ -1,0 +1,105 @@
+<!-- Page Content Section -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><link href="adminlogin_files/jquery_002.css" rel="stylesheet" type="text/css">
+<link href="adminlogin_files/jquery.css" rel="stylesheet" type="text/css">
+<link href="adminlogin_files/jquery_003.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="adminlogin_files/admin-style.css">
+<script src="adminlogin_files/jquery-1.js" type="text/javascript"></script>
+<script src="adminlogin_files/jquery-ui-1.js" type="text/javascript"></script>
+
+</head><body><div class="admin-login-form">
+    <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="login"> <img src="adminlogin_files/logo-mtpl.png" alt="Mahaveera Transport Pvt. Ltd." class="logo-img">
+    <!--ul>
+      <li><a href="#staff-login">Staff Login</a></li>
+      <li><a href="#client-login">Client Login</a></li>
+    </ul-->
+    <div id="staff-login">
+      <form role="form" action="adminlogin.php" method="post">
+        <div class="login-msg"></div>        <div class="login-field-row row">
+          <label>Username</label>
+          <input name="name" required="" autofocus="" type="text" pattern="\w+" onkeypress="return alpha(event)" required/>
+        </div>
+        <div class="login-field-row row">
+          <label>Password</label>
+          <input name="password" required="" type="password">
+        </div>
+        <div class="login-field-row row">
+          <label>Branch</label>
+          <select name="branch" required="">
+                        <option selected="selected" value="59">AMBALA</option>
+                        <option value="35">BANGALORE</option>
+                        <option value="65">BECHARAJI</option>
+                        <option value="62">BHIWADI</option>
+                        <option value="34">CHENNAI</option>
+                        <option value="37">COCHIN</option>
+                        <option value="58">COIMBATORE</option>
+                        <option value="46">DEHRADOON</option>
+                        <option value="31">DELHI</option>
+                        <option value="61">DHARUHERA</option>
+                        <option value="63">FARIDABAD</option>
+                        <option value="54">GOA</option>
+                        <option value="44">GURGAON</option>
+                        <option value="49">GWALIOR</option>
+                        <option value="60">HARIDWAR</option>
+                        <option value="38">HYDERABAD</option>
+                        <option value="43">INDORE</option>
+                        <option value="57">JAIPUR</option>
+                        <option value="53">KALAAMB</option>
+                        <option value="64">KOLKATA</option>
+                        <option value="45">KOTTAYAM</option>
+                        <option value="51">LAKSAR</option>
+                        <option value="47">MADURAI</option>
+                        <option value="32">MUMBAI</option>
+                        <option value="40">MYSORE</option>
+                        <option value="48">NAGPUR</option>
+                        <option value="55">NANGLAMAL</option>
+                        <option value="42">NOIDA</option>
+                        <option value="41">PONDICHERRY</option>
+                        <option value="39">PUNE</option>
+                        <option value="33">RUDERPUR</option>
+                        <option value="56">TRICHY</option>
+                        <option value="50">VADODARA</option>
+                        <option value="36">VAPI</option>
+                        <option value="52">ZINDPUR</option>
+                      </select>
+        </div>
+        <div class="login-field-btn">
+          <input name="LOGIN" value="LOGIN" type="submit">
+        </div>
+      </form>
+    </div>
+    <div id="client-login" class="hidden">
+      <form role="form" action="adminlogin.php" method="post">
+        <div class="login-msg"></div>        <div class="login-field-row row">
+          <label>Username</label>
+          <input name="username" required="" autofocus="" type="text">
+        </div>
+        <div class="login-field-row row">
+          <label>Password</label>
+          <input name="password" required="" type="password">
+        </div>
+        <div class="login-field-btn">
+          <input name="LOGIN" value="LOGIN" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function() {
+	$( "#login" ).tabs(); 
+});
+</script> 
+
+
+<script type="text/javascript">
+			  function alpha(e)
+			  {
+			  var k;
+			  document.all ? k=e.keycode: k=e.which;
+			  return((k>64 && k<91) || (k>96 && k<123) || k==8 );
+			  }
+			  </script>
+			 
+			 
+</body></html>

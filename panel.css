@@ -1,0 +1,37 @@
+body {
+
+height:1400px;
+ background:url(index_files/truck2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+     color: black;
+}
+
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+ 
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.aa
+{
+width:419px;
+height:200px;
+background-color:rgba(116, 173, 218, 0.15);
+margin:-14px auto;
+margin-top:98px;
+padding-top:10px;
+padding-bottom:257px;
+padding-left:-1px;
+border-radius:15px;
+-webkit-border-radius:15px;
+-o-border-radius:15px;
+-moz-border-radius:15px;
+color:black;
+font-weight:bolder;
+}

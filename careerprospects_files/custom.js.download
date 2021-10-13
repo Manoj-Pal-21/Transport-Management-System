@@ -1,0 +1,138 @@
+$(document).ready(function(){
+
+// This js is working for input field label
+// Set effect for field lable
+    $("input").focus(function(){
+        $(this).parent(".cb-field-wrap").addClass('focused');
+    });
+	
+	$('input').blur(function () {
+	var textBox = $(this).val();
+	
+	  if (textBox=="") {
+		$(this).parent(".cb-field-wrap").removeClass('focused');
+	  }
+});
+
+//create the slider
+$('.cd-testimonials-wrapper').flexslider({
+	selector: ".cd-testimonials > li",
+	animation: "slide",
+	controlNav: false,
+	slideshow: true,
+	smoothHeight: true,
+	delay: 9000,
+	start: function(){
+		$('.cd-testimonials').children('li').css({
+			'opacity': 1,
+			'position': 'relative'
+		});
+	}
+});
+
+// Added height for Mobile menu
+$(window).resize(function() {
+    $('.article-wrap').css('min-height',($('.sidebar').height() + 15));
+});
+
+$(window).trigger('resize');
+});
+
+// Equal Height Function
+equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     jQueryel,
+     topPosition = 0;
+ jQuery(container).each(function() {
+
+   jQueryel = jQuery(this);
+   jQuery(jQueryel).height('auto')
+   topPostion = jQueryel.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = jQueryel.height();
+     rowDivs.push(jQueryel);
+   } else {
+     rowDivs.push(jQueryel);
+     currentTallest = (currentTallest < jQueryel.height()) ? (jQueryel.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+	 
+     //rowDivs[currentDiv].css( { "min-height" : currentTallest } );
+   }
+   
+   return currentTallest;
+   
+ });
+}
+
+jQuery(window).load(function() {
+	equalheight('.contact-address');
+	equalheight('.contact-phone');
+});
+
+jQuery(window).resize(function(){
+	equalheight('.contact-address');
+	equalheight('.contact-phone');
+});
+
+(function() {
+	"use strict";
+	var Core = {
+		initialized: false,
+		initialize: function() {
+			if (this.initialized) return;
+			this.initialized = true;
+			this.build();
+		},
+		build: function() {
+
+			// Counter
+			this.initNumberCounter();
+		},
+
+		initNumberCounter: function(options) {
+			if ($('body').length) {
+				var waypointScroll = $('.percent-blocks').data('waypoint-scroll');
+				if(waypointScroll){
+					$(window).on('scroll', function() {
+						var winH = $(window).scrollTop();
+						$('.percent-blocks').waypoint(function() {
+							$('.chart').each(function() {
+								CharsStart();
+							});
+						}, {
+							offset: '80%'
+						});
+					});
+				}
+			}
+			function CharsStart() {
+				$('.chart').easyPieChart({
+					barColor: false,
+					trackColor: false,
+					scaleColor: false,
+					scaleLength: false,
+					lineCap: false,
+					lineWidth: false,
+					size: false,
+					animate: 3000,
+					onStep: function(from, to, percent){
+						$(this.el).find('.percent').text(Math.round(percent));
+					}
+				});
+			}
+		},
+	};
+	Core.initialize();
+})();
+
